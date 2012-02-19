@@ -21,7 +21,7 @@ public class UserListFragment extends ListFragment implements LoaderManager.Load
     {
         super.onCreate(savedInstanceState);
         getLoaderManager().initLoader(USER_LIST_LOADER, null, this);
-        mAdapter = new UserListAdapter(getActivity().getApplicationContext(),
+        mAdapter = new UserListAdapter(getActivity(),
                                        null, CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER);
         setListAdapter(mAdapter);
     }
